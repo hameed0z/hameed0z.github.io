@@ -4,16 +4,37 @@
  *
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
-
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
 import "./layout.css"
+import React, { useState } from "react"
+import PropTypes from "prop-types"
+import Image from "../components/image"
 
-const Layout = ({ children }) => (
-  <StaticQuery
+import { StaticQuery, graphql } from "gatsby"
+import {
+  Layout, Menu, Icon,
+} from 'antd';
+
+const { Content, Footer } = Layout;
+
+//import Header from "./header"
+
+const Layouts = ({ children }) => {
+  const [theme, setTheme] = useState('dark');
+  const [current, setCurrent] = useState('0');
+  const changeTheme = (value) => {
+    value = value === 'light' ? 'dark' : 'light'
+    setTheme(value);
+  }
+  const handleClick = ({ key }) => {
+    console.log('click ', key);
+    if (key === '3') {
+      changeTheme(theme)
+    } else {
+      setCurrent(key);
+    }
+  }
+
+  return (<StaticQuery
     query={graphql`
       query SiteTitleQuery {
         site {
@@ -24,30 +45,45 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
-    )}
-  />
-)
+      <div style={{ minHeight: '100vh', display: 'flex' }}>
 
-Layout.propTypes = {
+
+        <Menu theme={theme} onClick={handleClick} defaultSelectedKeys={['1']} selectedKeys={[current]} style={{ flex: 1 }}
+        >
+          <Image />
+          <Menu.Item key="0">
+            <Icon type="user" />
+            <span>me</span>
+          </Menu.Item>
+          <Menu.Item key="1">
+            <Icon type="desktop" />
+            <span>works</span>
+          </Menu.Item>
+          <Menu.Item key="2">
+            <Icon type="file" />
+            <span>blog</span>
+          </Menu.Item>
+          <Menu.Item key="3">
+            <Icon type="file" />
+            <span>dark mode</span>
+          </Menu.Item>
+        </Menu>
+        <Layout style={{ flex: 5 }}>
+          <Content >
+            {children[current]}
+          </Content>
+          <Footer style={{ textAlign: 'center' }}>
+            ©2018 Hameed, All rights reserved.
+          </Footer>
+        </Layout>
+      </div>
+    )}
+  />)
+}
+
+
+Layouts.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default Layouts
