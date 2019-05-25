@@ -11,7 +11,7 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import {
   Layout, Menu, Icon,
 } from 'antd';
-
+import Image from './image'
 const { Footer } = Layout;
 
 const Layouts = ({ children, location }) => {
@@ -56,6 +56,7 @@ const Layouts = ({ children, location }) => {
             inlineCollapsed={mobile ? false : true}
             style={{ display: mobile ? 'flex' : 'inline', justifyContent: mobile ? 'center' : 'normal' }}
           >
+            {!mobile && <Image />}
             <Menu.Item key="/" >
               <Link
                 to="/"
@@ -88,7 +89,7 @@ const Layouts = ({ children, location }) => {
             {children}
           </div>
         </div>
-        <Footer style={{ textAlign: 'center', height: 75 }}>
+        <Footer style={{ textAlign: 'center', padding: 17 }}>
           <div style={{ display: 'flex', justifyContent: 'center', }}>
             <a style={{ paddingBottom: 2 }} href='https://www.github.com/7ameed' target="_blank" rel="noopener noreferrer">
               <Icon type='github' style={{ fontSize: 17 }} />
