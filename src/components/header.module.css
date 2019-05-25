@@ -6,4 +6,7 @@
   background: -ms-linear-gradient(336deg, #0000ff 0%, #000000 100%); /* ie10+ */
   background: linear-gradient(114deg, #0000ff 0%, #000000 100%); /* w3c */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#000000',GradientType=1 ); /* ie6-9 */
+  display: flex;
+  flex: 4;
+  height: '20vh';
 }
