@@ -8,8 +8,7 @@ const IndexPage = () => (
         {/* child num 1 'work page' */}
         <div style={{ padding: 30 }}>
             <SEO title="work" keywords={[`hameed`, `blog`, `software`, `development`, 'web', 'mobile', 'app', 'application', 'javascript', 'nodejs', `react`]} />
-
-            <h4 style={{ color: '#404040' }}>Coming soon...</h4>
+            <h2 style={{ color: '#404040' }}>Coming soon...</h2>
         </div>
     </Layout>
 )

@@ -53,8 +53,8 @@ const Layouts = ({ children, location }) => {
           <Menu
             theme={'light'} onClick={handleClick} selectedKeys={[current]}
             mode={mobile ? 'horizontal' : 'inline'}
-            inlineCollapsed={mobile ? false : true}
-            style={{ display: mobile ? 'flex' : 'inline', justifyContent: mobile ? 'center' : 'normal' }}
+            inlineCollapsed={mobile ? false : false}
+            style={{ display: mobile ? 'flex' : 'inline', justifyContent: mobile ? 'center' : 'normal', flex: mobile ? 0 : 2 }}
           >
             {!mobile && <Image />}
             <Menu.Item key="/" >
@@ -85,7 +85,7 @@ const Layouts = ({ children, location }) => {
               </Link>
             </Menu.Item>
           </Menu>
-          <div style={{ backgroundColor: 'white', overflowY: 'auto' }}>
+          <div style={{ backgroundColor: 'white', overflowY: 'auto', flex: 10 }}>
             {children}
           </div>
         </div>
