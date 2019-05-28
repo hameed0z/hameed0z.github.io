@@ -19,11 +19,13 @@
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.19",
     "prop-types": "^15.7.2",
+    "rc-gesture": "^0.0.22",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-floating-button-menu": "^2.0.1",
     "react-helmet": "^5.2.1",
-    "react-mfb": "^0.6.0"
+    "react-mfb": "^0.6.0",
+    "react-with-gesture": "^4.0.8"
   },
   "devDependencies": {
     "prettier": "^1.17.0"
@@ -34,7 +36,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -o",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",

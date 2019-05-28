@@ -7,7 +7,9 @@
 import "./layout.css"
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql, Link } from "gatsby"
+import { StaticQuery, graphql, Link, navigate } from "gatsby"
+import Gesture from 'rc-gesture';
+
 import {
   Layout, Menu, Icon,
 } from 'antd';
@@ -37,6 +39,44 @@ const Layouts = ({ children, location }) => {
     setCurrent(key);
   }
 
+  const handleSwipeLeft = () => {
+    const opt = {
+      '/': 'work',
+      'work': 'blog',
+      'blog': 'blog'
+    }
+    navigate(opt[location])
+  }
+
+  const handleSwipeRight = () => {
+    const opt = {
+      '/': '/',
+      'work': '/',
+      'blog': 'work'
+    }
+    navigate(opt[location])
+  }
+
+  const gestureRender = (children) => {
+    if (mobile) {
+      return (
+        <Gesture
+          onSwipeLeft={handleSwipeLeft}
+          onSwipeRight={handleSwipeRight}
+        >
+          <div style={{ backgroundColor: 'white', overflowY: 'auto', flex: 5 }}>
+            {children}
+          </div>
+        </Gesture>
+      )
+    } else {
+      return (
+        <div style={{ backgroundColor: 'white', overflowY: 'auto', flex: 5 }}>
+          {children}
+        </div>)
+    }
+  }
+
   return (<StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -54,7 +94,7 @@ const Layouts = ({ children, location }) => {
             theme={'light'} onClick={handleClick} selectedKeys={[current]}
             mode={mobile ? 'horizontal' : 'inline'}
             inlineCollapsed={mobile ? false : false}
-            style={{ display: mobile ? 'flex' : 'inline', justifyContent: mobile ? 'center' : 'normal', flex: mobile ? 0 : 1 }}
+            style={{position:'static', display: mobile ? 'flex' : 'inline', justifyContent: mobile ? 'center' : 'normal', flex: mobile ? 0 : 1 }}
           >
             {!mobile && <Image />}
             <Menu.Item key="/" >
@@ -85,9 +125,7 @@ const Layouts = ({ children, location }) => {
               </Link>
             </Menu.Item>
           </Menu>
-          <div style={{ backgroundColor: 'white', overflowY: 'auto', flex: 5 }}>
-            {children}
-          </div>
+          {gestureRender(children)}
         </div>
         <Footer style={{ textAlign: 'center', padding: 17 }}>
           <div style={{ display: 'flex', justifyContent: 'center', }}>
