@@ -1,5 +1,5 @@
 import React from "react"
-import { Form, Input, Button,  } from 'antd';
+import { Form, Input, Button, } from 'antd';
 
 const FormComponent = (props) => {
     const { getFieldDecorator } = props.form;
@@ -9,13 +9,13 @@ const FormComponent = (props) => {
         props.form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
-
+                props.form.resetFields()
             }
         });
     };
 
     return (
-        <Form layout='vertical'wrapperCol={{ span: 22 }} onSubmit={handleSubmit}>
+        <Form layout='vertical' wrapperCol={{ span: 22 }} onSubmit={handleSubmit}>
             <Form.Item >
                 {getFieldDecorator('name', {
                     rules: [{ required: true, message: 'Please input your name!' }],

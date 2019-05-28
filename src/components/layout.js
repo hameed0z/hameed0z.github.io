@@ -15,16 +15,17 @@ import {
 } from 'antd';
 import Image from './image'
 const { Footer } = Layout;
-
 const Layouts = ({ children, location }) => {
   const [mobile, setDim] = useState(false);
   const [current, setCurrent] = useState('0');
-
+  
   useEffect(() => {
     setCurrent(location)
     handleResize()
     window.addEventListener('resize', handleResize)
-    return () => { window.removeEventListener('resize', handleResize) }
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
   }, ['location'])
 
   const handleResize = () => {
@@ -34,6 +35,7 @@ const Layouts = ({ children, location }) => {
       setDim(false)
     }
   }
+ 
 
   const handleClick = ({ key }) => {
     setCurrent(key);
@@ -64,7 +66,7 @@ const Layouts = ({ children, location }) => {
           onSwipeLeft={handleSwipeLeft}
           onSwipeRight={handleSwipeRight}
         >
-          <div style={{ backgroundColor: 'white', overflowY: 'auto', flex: 5 }}>
+          <div style={{ backgroundColor: 'white', overflowY: 'auto', flex: 5, marginTop: 30 }}>
             {children}
           </div>
         </Gesture>
@@ -94,7 +96,7 @@ const Layouts = ({ children, location }) => {
             theme={'light'} onClick={handleClick} selectedKeys={[current]}
             mode={mobile ? 'horizontal' : 'inline'}
             inlineCollapsed={mobile ? false : false}
-            style={{position:'static', display: mobile ? 'flex' : 'inline', justifyContent: mobile ? 'center' : 'normal', flex: mobile ? 0 : 1 }}
+            style={{ position: 'static', display: mobile ? 'flex' : 'inline', justifyContent: mobile ? 'center' : 'normal', flex: mobile ? 0 : 1 }}
           >
             {!mobile && <Image />}
             <Menu.Item key="/" >
