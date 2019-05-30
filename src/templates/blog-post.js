@@ -11,7 +11,7 @@ export default function Template({ data }) {
   return (
     <Layout location='blog'>
       <div style={{ padding: 30, maxWidth: 550 }}>
-        <SEO title="me" keywords={[`hameed`, `blog`, `software`, `development`, 'web', 'mobile', 'app', 'application', 'javascript', 'nodejs', `react`]} />
+        <SEO title={post.frontmatter.title} keywords={[`hameed`, `blog`, `software`, `development`, 'web', 'mobile', 'app', 'application', 'javascript', 'nodejs', `react`]} />
         <div style={{ marginBottom: 20, }}>
           <h2 style={{ color: '#404040' }}>{post.frontmatter.title}</h2>
           <p style={{ color: '#939393', marginBottom: 0 }}>Posted at {post.frontmatter.date}</p>
