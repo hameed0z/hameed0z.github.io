@@ -12,9 +12,15 @@ const IndexPage = () => (
             <Card
                 style={{ width: 700 }}
                 actions={[
-                    <a href="https://play.google.com/store/apps/details?id=com.curawella&hl=en" target="_blank" rel="noopener noreferrer"><Icon type="android" /></a>,
-                    <a href="https://itunes.apple.com/us/app/curawella/id1437764002?mt=8" target="_blank" rel="noopener noreferrer"><Icon type="apple" /></a>,
-                    <a href="http://curawella.com" target="_blank" rel="noopener noreferrer"><Icon type="global" /></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.curawella&hl=en" target="_blank" rel="noopener noreferrer">
+                        <Icon theme='filled' type="android" style={{ fontSize: 18, color:'dodgerblue'}} />
+                    </a>,
+                    <a href="https://itunes.apple.com/us/app/curawella/id1437764002?mt=8" target="_blank" rel="noopener noreferrer">
+                        <Icon theme='filled' type="apple" style={{ fontSize: 18, color: 'dodgerblue' }}/>
+                    </a>,
+                    <a href="http://curawella.com" target="_blank" rel="noopener noreferrer">
+                        <Icon  type="global" style={{ fontSize: 18, color: 'dodgerblue' }}/>
+                    </a>
                 ]}
             >
                 <Meta
@@ -37,6 +43,8 @@ const IndexPage = () => (
                     <Tag color="dodgerblue">firebase</Tag>
                     <Tag color="dodgerblue">elastic search</Tag>
                 </div>
+                <br />
+                Project Links:
             </Card>
         </div>
     </Layout>
