@@ -18,7 +18,7 @@ const { Footer } = Layout;
 const Layouts = ({ children, location }) => {
   const [mobile, setDim] = useState(false);
   const [current, setCurrent] = useState('0');
-  
+
   useEffect(() => {
     setCurrent(location)
     handleResize()
@@ -35,7 +35,7 @@ const Layouts = ({ children, location }) => {
       setDim(false)
     }
   }
- 
+
 
   const handleClick = ({ key }) => {
     setCurrent(key);
@@ -59,6 +59,23 @@ const Layouts = ({ children, location }) => {
     navigate(opt[location])
   }
 
+  const renderFooter = () => (
+    <Footer style={{ textAlign: 'center', padding: 17 }}>
+      <div style={{ display: 'flex', justifyContent: 'center', }}>
+        <a style={{ paddingBottom: 2 }} href='https://www.github.com/7ameed' target="_blank" rel="noopener noreferrer">
+          <Icon type='github' style={{ fontSize: 17 }} />
+        </a>
+        <a style={{ paddingBottom: 2, marginLeft: 15, marginRight: 15 }} href='https://www.linkedin.com/in/abdelhameed-m' target="_blank" rel="noopener noreferrer">
+          <Icon type='linkedin' style={{ fontSize: 17 }} />
+        </a>
+        <a style={{ paddingBottom: 2 }} href='https://www.twitter.com/hameed0z' target="_blank" rel="noopener noreferrer">
+          <Icon type='twitter' style={{ fontSize: 17 }} />
+        </a>
+      </div>
+      ©{new Date().getFullYear()} Hameed, All rights reserved.
+        </Footer>
+  )
+
   const gestureRender = (children) => {
     if (mobile) {
       return (
@@ -66,7 +83,7 @@ const Layouts = ({ children, location }) => {
           onSwipeLeft={handleSwipeLeft}
           onSwipeRight={handleSwipeRight}
         >
-          <div style={{ backgroundColor: 'white', overflowY: 'auto', flex: 5, }}>
+          <div style={{ backgroundColor: 'white', overflowY: 'auto', flex:1 }}>
             {children}
           </div>
         </Gesture>
@@ -128,21 +145,9 @@ const Layouts = ({ children, location }) => {
             </Menu.Item>
           </Menu>
           {gestureRender(children)}
+          {mobile && renderFooter()}
         </div>
-        <Footer style={{ textAlign: 'center', padding: 17 }}>
-          <div style={{ display: 'flex', justifyContent: 'center', }}>
-            <a style={{ paddingBottom: 2 }} href='https://www.github.com/7ameed' target="_blank" rel="noopener noreferrer">
-              <Icon type='github' style={{ fontSize: 17 }} />
-            </a>
-            <a style={{ paddingBottom: 2, marginLeft: 15, marginRight: 15 }} href='https://www.linkedin.com/in/abdelhameed-m' target="_blank" rel="noopener noreferrer">
-              <Icon type='linkedin' style={{ fontSize: 17 }} />
-            </a>
-            <a style={{ paddingBottom: 2 }} href='https://www.twitter.com/hameed0z' target="_blank" rel="noopener noreferrer">
-              <Icon type='twitter' style={{ fontSize: 17 }} />
-            </a>
-          </div>
-          ©{new Date().getFullYear()} Hameed, All rights reserved.
-        </Footer>
+        {!mobile && renderFooter()}
       </div>
     )}
   />)
