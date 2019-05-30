@@ -66,7 +66,7 @@ const Layouts = ({ children, location }) => {
           onSwipeLeft={handleSwipeLeft}
           onSwipeRight={handleSwipeRight}
         >
-          <div style={{ backgroundColor: 'white', overflowY: 'auto', flex: 5, marginTop: 30 }}>
+          <div style={{ backgroundColor: 'white', overflowY: 'auto', flex: 5, }}>
             {children}
           </div>
         </Gesture>

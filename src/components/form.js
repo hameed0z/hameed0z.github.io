@@ -27,6 +27,11 @@ const FormComponent = (props) => {
                 })(<Input placeholder="Email" />)}
             </Form.Item>
             <Form.Item >
+                {getFieldDecorator('subject', {
+                    rules: [{ required: true, message: 'Please input your subject!' }],
+                })(<Input placeholder="Subject" />)}
+            </Form.Item>
+            <Form.Item >
                 {getFieldDecorator('message', {
                     rules: [{ required: true, message: 'Please input your message!' }],
                 })(<Input.TextArea autosize={{ minRows: 3, maxRows: 5 }} placeholder="Your Message" />)}

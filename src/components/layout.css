@@ -524,6 +524,8 @@ ol li {
 }
 ul li {
   padding-left: 0;
+  font-size:13px;
+  margin-bottom: 5px;
 }
 li > ol {
   margin-left: 1.45rem;
@@ -629,6 +631,10 @@ pre tt:after {
   }
   p {
     font-size: 18px;
+  }
+  ul li{
+    font-size:15px;
+      margin-bottom: 7px;
   }
   h5 {
     font-size: 1rem;
