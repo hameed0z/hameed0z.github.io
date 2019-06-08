@@ -17,6 +17,7 @@ import Image from './image'
 const { Footer } = Layout;
 const Layouts = ({ children, location }) => {
   const [mobile, setDim] = useState(false);
+//  const [theme, setTheme] = useState('dark');
   const [current, setCurrent] = useState('0');
 
   useEffect(() => {
@@ -36,6 +37,13 @@ const Layouts = ({ children, location }) => {
     }
   }
 
+  // const handleTheme = () => {
+  //   if (theme=='light') {
+  //     setTheme('dark')
+  //   } else {
+  //     setTheme('light')
+  //   }
+  // }
 
   const handleClick = ({ key }) => {
     setCurrent(key);

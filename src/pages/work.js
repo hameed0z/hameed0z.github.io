@@ -1,5 +1,5 @@
 import React from "react"
-import { Card, Icon, Tag } from 'antd';
+import { Card, Icon, Tag, Avatar } from 'antd';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,17 +13,18 @@ const IndexPage = () => (
                 style={{ width: 700 }}
                 actions={[
                     <a href="https://play.google.com/store/apps/details?id=com.curawella&hl=en" target="_blank" rel="noopener noreferrer">
-                        <Icon theme='filled' type="android" style={{ fontSize: 18, color:'dodgerblue'}} />
+                        <Icon theme='filled' type="android" style={{ fontSize: 18, color: 'dodgerblue' }} />
                     </a>,
                     <a href="https://itunes.apple.com/us/app/curawella/id1437764002?mt=8" target="_blank" rel="noopener noreferrer">
-                        <Icon theme='filled' type="apple" style={{ fontSize: 18, color: 'dodgerblue' }}/>
+                        <Icon theme='filled' type="apple" style={{ fontSize: 18, color: 'dodgerblue' }} />
                     </a>,
-                    <a href="http://curawella.com" target="_blank" rel="noopener noreferrer">
-                        <Icon  type="global" style={{ fontSize: 18, color: 'dodgerblue' }}/>
+                    <a href="https://curawella.com" target="_blank" rel="noopener noreferrer">
+                        <Icon type="global" style={{ fontSize: 18, color: 'dodgerblue' }} />
                     </a>
                 ]}
             >
                 <Meta
+                    avatar={<Avatar src="https://curawella.com/static/media/logo.43864ad2.png" />}
                     title="Curawella"
                     description="A telemidicine cross platform mobile app"
                 />

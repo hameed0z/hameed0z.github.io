@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const BlogPage = ({ data }) => (
     <Layout location='blog'>
         {/* child num 2 'blog page' */}
-        <div style={{ padding: 30, maxWidth: 700 }}>
+        <div style={{ padding: 40, maxWidth: 800 }}>
             <SEO title="blog" keywords={[`hameed`, `blog`, `software`, `development`, 'web', 'mobile', 'app', 'application', 'javascript', 'nodejs', `react`]} />
             <h3 style={{ color: '#404040' }}>Latest Articles</h3>
             {data.allMarkdownRemark.edges.map(post => (

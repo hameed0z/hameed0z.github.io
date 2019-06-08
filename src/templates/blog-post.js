@@ -10,7 +10,7 @@ export default function Template({ data }) {
   const post = data.markdownRemark
   return (
     <Layout location='blog'>
-      <div style={{ padding: 30, maxWidth: 550 }}>
+      <div style={{ padding: 40, maxWidth: 800 }}>
         <SEO title={post.frontmatter.title} keywords={[`hameed`, `blog`, `software`, `development`, 'web', 'mobile', 'app', 'application', 'javascript', 'nodejs', `react`]} />
         <div style={{ marginBottom: 20, }}>
           <h2 style={{ color: '#404040' }}>{post.frontmatter.title}</h2>
