@@ -35,7 +35,7 @@ const IndexPage = () => {
           <li>MongoDB</li>
         </ul>
         <p>
-          I live in Alexandria, Egypt and I'm obsessed with it's see.  <br />
+          I live in Alexandria, Egypt and I'm obsessed with its sea.  <br />
           I love to contribute into open source in my free time.  <br />
           I love Chess, running, singing ,playing violin and above all JS <Icon theme='filled' style={{ color: '#e25555' }} type='heart' />.
         </p>
