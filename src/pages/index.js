@@ -18,7 +18,7 @@ const IndexPage = () => {
         <h3 style={{ color: '#404040' }}>Hey there, It's Hameed! </h3>
         <p style={{ marginBottom: 5 }}>A software engineer who likes to build,
           and help other people build software products for web and mobile. <br />
-          And I have been doing software development stuff for almost 3 years. <br />
+          And I have been doing software development stuff for almost {new Date().getFullYear() - 2016} years. <br />
           Currently, I work as a Software Engineer at <a href="https://shieldfy.io" target="_blank" rel="noopener noreferrer">Shieldfy</a> a Security protection and vulnerabilities detection for developers web application startup.  <br />
           Previously in <a href="https://curawella.com" target="_blank" rel="noopener noreferrer">Curawella</a> a telemedicine startup.  <br />
           And all the content here represents only my own opinions.  <br />
