@@ -1,6 +1,6 @@
 import React from "react"
 import { Form, Input, Button, } from 'antd';
-
+import {key} from '../.constants'
 const FormComponent = ({ form }) => {
     const { getFieldDecorator } = form;
 
@@ -10,11 +10,10 @@ const FormComponent = ({ form }) => {
             if (!err) {
                 let { name, email, subject, message } = values;
                 fetch('https://api.sparkpost.com/api/v1/transmissions', {
-                    method: 'POST',   // *GET, POST, PUT, DELETE, etc.
-                    // mode: 'no-cors',
+                    method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': '5dca95dac8d1a2fa9d65d9a0474d6b331d558517'
+                        'Authorization': key
                     },
                     body: JSON.stringify({
                         options: {
