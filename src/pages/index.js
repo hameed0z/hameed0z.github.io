@@ -12,7 +12,7 @@ const IndexPage = () => {
         <SEO title="me" keywords={[`hameed`, 'freelancer', `blog`, `software`, `development`, 'web', 'mobile', 'app', 'application', 'javascript', 'nodejs', `react`, 'react native', 'vue']} />
         <div style={{ marginBottom: 20, }}>
           <h2 style={{ color: '#404040' }}>Hameed Muhammad</h2>
-          <h5 style={{ color: '#404040' }}>Software Engineer & JS Ninja</h5>
+          <h5 style={{ color: '#404040' }}>Software Engineer & MSc.CS student at Alexandra University</h5>
         </div>
         <br />
         <h3 style={{ color: '#404040' }}>Hey there, It's Hameed! </h3>
@@ -46,8 +46,8 @@ const IndexPage = () => {
         </p>
         <br />
         <h3 style={{ color: '#404040' }}>Academic Life</h3>
-        <p style={{ marginBottom: 5 }}>Not too much but, I hold a BSc.Computer Science</p>
-        <p style={{ marginBottom: 5 }}>Also, I do some research in the Software Engineering for Self-Adaptive Systems</p>
+        <p style={{ marginBottom: 5 }}>MSc.Computer Science student at Alexandria University</p>
+        <p style={{ marginBottom: 5 }}>Also, I do some research in the Software Engineering for Self-Adaptive Systems & ML</p>
         <br />
         <br />
         <h3 style={{ color: '#404040' }}>Wanna Say Hi!</h3>
