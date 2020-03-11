@@ -2,9 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import {
-  Icon, Button
-} from 'antd'
+import Signature from "../components/signature"
+import { Icon, Button } from 'antd'
 const windowGlobal = typeof window !== 'undefined' && window
 export default function Template({ data }) {
   const post = data.markdownRemark
@@ -25,6 +24,16 @@ export default function Template({ data }) {
           </Button>
         </div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <p>By following me on twitter
+        <a style={{ marginLeft: 5 }} href='https://www.twitter.com/hameed0z' target="_blank" rel="noopener noreferrer">
+            <Icon type='twitter' style={{ fontSize: 17 }} />
+            <span> @hameed0z </span>
+          </a>
+        </p>
+        <p style={{ display: 'inline' }}>Thanks</p>
+        <div style={{ width: 200 }}>
+          <Signature />
+        </div>
       </div>
     </Layout>
   )

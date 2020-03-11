@@ -10,14 +10,11 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql, Link, navigate } from "gatsby"
 import Gesture from 'rc-gesture';
 
-import {
-  Layout, Menu, Icon,
-} from 'antd';
+import { Layout, Menu, Icon } from 'antd';
 import Image from './image'
 const { Footer } = Layout;
 const Layouts = ({ children, location }) => {
   const [mobile, setDim] = useState(false);
-//  const [theme, setTheme] = useState('dark');
   const [current, setCurrent] = useState('0');
 
   useEffect(() => {
@@ -27,7 +24,7 @@ const Layouts = ({ children, location }) => {
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  }, ['location'])
+  }, [location])
 
   const handleResize = () => {
     if (window.innerWidth < 650) {
@@ -36,14 +33,6 @@ const Layouts = ({ children, location }) => {
       setDim(false)
     }
   }
-
-  // const handleTheme = () => {
-  //   if (theme=='light') {
-  //     setTheme('dark')
-  //   } else {
-  //     setTheme('light')
-  //   }
-  // }
 
   const handleClick = ({ key }) => {
     setCurrent(key);
@@ -91,17 +80,57 @@ const Layouts = ({ children, location }) => {
           onSwipeLeft={handleSwipeLeft}
           onSwipeRight={handleSwipeRight}
         >
-          <div style={{ backgroundColor: 'white', overflowY: 'auto', flex:1 }}>
+          <div style={{ backgroundColor: 'white', overflowY: 'auto', flex: 1 }}>
             {children}
           </div>
         </Gesture>
       )
     } else {
       return (
-        <div style={{ backgroundColor: 'white', overflowY: 'auto', flex: 5 }}>
+        <div style={{ backgroundColor: 'white', overflow: 'auto', flex: 5, }}>
           {children}
         </div>)
     }
+  }
+
+  const renderMenu = () => {
+    return (
+      <Menu
+        theme={'light'} onClick={handleClick} selectedKeys={[current]}
+        mode={mobile ? 'horizontal' : 'inline'}
+        inlineCollapsed={mobile ? false : false}
+        style={{ position: 'static', display: mobile ? 'flex' : 'inline', justifyContent: mobile ? 'center' : 'normal', flex: mobile ? 0 : 1, flexGrow: 1, flexShrink: 1, flexBasis: 1 }}
+      >
+        <Image />
+        <Menu.Item key="/" >
+          <Link
+            to="/"
+            activeStyle={{ color: "#62b4fb" }}
+          >
+            <Icon type="user" />
+            <span>me</span>
+          </Link>
+
+        </Menu.Item>
+        <Menu.Item key="work">
+          <Link
+            to="/work"
+          >
+            <Icon type="desktop" />
+            <span>work</span>
+          </Link>
+
+        </Menu.Item>
+        <Menu.Item key="blog">
+          <Link
+            to="/blog"
+          >
+            <Icon type="book" />
+            <span>blog</span>
+          </Link>
+        </Menu.Item>
+      </Menu>
+    )
   }
 
   return (<StaticQuery
@@ -115,43 +144,9 @@ const Layouts = ({ children, location }) => {
       }
     `}
     render={data => (
-      <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
-        <div style={{ display: 'flex', flex: 1, flexDirection: mobile ? 'column' : 'row' }}>
-          <Menu
-            theme={'light'} onClick={handleClick} selectedKeys={[current]}
-            mode={mobile ? 'horizontal' : 'inline'}
-            inlineCollapsed={mobile ? false : false}
-            style={{ position: 'static', display: mobile ? 'flex' : 'inline', justifyContent: mobile ? 'center' : 'normal', flex: mobile ? 0 : 1 }}
-          >
-            {!mobile && <Image />}
-            <Menu.Item key="/" >
-              <Link
-                to="/"
-                activeStyle={{ color: "#62b4fb" }}
-              >
-                <Icon type="user" />
-                <span>me</span>
-              </Link>
-
-            </Menu.Item>
-            <Menu.Item key="work">
-              <Link
-                to="/work"
-              >
-                <Icon type="desktop" />
-                <span>work</span>
-              </Link>
-
-            </Menu.Item>
-            <Menu.Item key="blog">
-              <Link
-                to="/blog"
-              >
-                <Icon type="book" />
-                <span>blog</span>
-              </Link>
-            </Menu.Item>
-          </Menu>
+      <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', overflowY: 'hidden' }}>
+        <div style={{ display: 'flex', flex: 1, flexDirection: mobile ? 'column' : 'row', overflowY: 'hidden' }}>
+          {renderMenu()}
           {gestureRender(children)}
           {mobile && renderFooter()}
         </div>
@@ -160,7 +155,6 @@ const Layouts = ({ children, location }) => {
     )}
   />)
 }
-
 
 Layouts.propTypes = {
   children: PropTypes.node.isRequired,

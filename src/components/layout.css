@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+::-webkit-scrollbar {
+  width: 5px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #39b; 
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #29f; 
+  border-radius: 50px;
+}
 html {
   font-family:Nunito, sans-serif;
   -ms-text-size-adjust: 100%;
