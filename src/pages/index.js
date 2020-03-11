@@ -40,7 +40,7 @@ const IndexPage = () => {
         <p>
           You can find my (generally outdated) resume
           <a style={{ marginLeft: 5 }} href='https://docs.google.com/document/d/1Cu9T8BxFvL3ske0WXSF9qORqxVZLL8Oo0J-bjOqorjI/edit?usp=sharing' target="_blank" rel="noopener noreferrer">here</a>.<br />
-          I live in Alexandria, Egypt and I'm obsessed with it's see.  <br />
+          I live in Alexandria, Egypt and I'm obsessed with its sea.  <br />
           I love to contribute to open source in my free time.  <br />
           I love Chess, running, singing, playing violin and above all JS <Icon theme='filled' style={{ color: '#e25555' }} type='heart' />.
         </p>
