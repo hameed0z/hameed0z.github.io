@@ -8,7 +8,7 @@ const BlogPage = ({ data }) => (
     <Layout location='blog'>
         {/* child num 2 'blog page' */}
         <div style={{ padding: 40, maxWidth: 800 }}>
-            <SEO title="blog" keywords={[`hameed`, `blog`, `software`, `development`, 'web', 'mobile', 'app', 'application', 'javascript', 'nodejs', `react`]} />
+            <SEO title="blog" keywords={[`hameed`, `blog`, `software`, `development`, 'web', 'mobile', 'app', 'application', 'javascript', 'nodejs', `react`, `react native`, `python`, `fastapi`]} />
             <h3 style={{ color: '#404040' }}>Latest Articles</h3>
             {data.allMarkdownRemark.edges.map(post => (
                 <div key={post.node.id}>

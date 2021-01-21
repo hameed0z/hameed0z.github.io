@@ -1,8 +1,9 @@
 module.exports = {
+  pathPrefix: "/",
   siteMetadata: {
-    title: `hameed.tech`,
+    title: `7ameed`,
     description: `Hameed's Personal Website and Blog`,
-    author: `@hammed0z`,
+    author: `@7ameed`,
   },
   plugins: [
     // {

@@ -18,7 +18,7 @@ const Image = () => (
 
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "hey.png" }) {
+        file(relativePath: { eq: "hey.png" }) {
           childImageSharp {
             fluid(maxWidth:300 ) {
               ...GatsbyImageSharpFluid
@@ -27,7 +27,7 @@ const Image = () => (
         }
       }
     `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={data => <Img fluid={data.file.childImageSharp.fluid} />}
   />
 )
 export default Image

@@ -12,15 +12,16 @@ const IndexPage = () => {
         <SEO title="me" keywords={[`hameed`, 'freelancer', `blog`, `software`, `development`, 'web', 'mobile', 'app', 'application', 'javascript', 'nodejs', `react`, 'react native', 'vue']} />
         <div style={{ marginBottom: 20, }}>
           <h2 style={{ color: '#404040' }}>Hameed Muhammad</h2>
-          <h5 style={{ color: '#404040' }}>Software Engineer & MSc. CS student at Alexandra University</h5>
+          <h5 style={{ color: '#404040' }}>Software Engineer & Machine Learning Specialist</h5>
         </div>
         <br />
         <h3 style={{ color: '#404040' }}>Hey there, It's Hameed! </h3>
         <p style={{ marginBottom: 5 }}>A software engineer who likes to build,
-          and help other people build software products for web and mobile. <br />
+          and help other people build software and data products for humans. <br />
           And I have been doing software development stuff for almost {new Date().getFullYear() - 2016} years. <br />
-          Currently, I work as a Software Engineer at <a href="https://shieldfy.io" target="_blank" rel="noopener noreferrer">Shieldfy</a> a Security protection and vulnerabilities detection for developers web application startup.  <br />
-          Previously in <a href="https://curawella.com" target="_blank" rel="noopener noreferrer">Curawella</a> a telemedicine startup.  <br />
+          Currently, I work as a Software Engineer at <a href="https://ibtikar.net.sa" target="_blank" rel="noopener noreferrer">Ibtikar technologies</a> <br />
+          Previously in <a href="https://shieldfy.io" target="_blank" rel="noopener noreferrer">Shieldfy</a> a Security protection and vulnerabilities detection for developers web application startup. 
+          & in <a href="https://curawella.com" target="_blank" rel="noopener noreferrer">Curawella</a> a telemedicine startup.  <br />
           And all the content here represents only my own opinions.  <br />
           Before this, I worked for many software companies as a software engineer <br />
           Usually using :
@@ -28,9 +29,11 @@ const IndexPage = () => {
         <ul>
           <li>React.js</li>
           <li>React Native</li>
-          <li>Flutter</li>
-          <li>Vue</li>
+          <li>Typescript</li>
+          <li>Javascript</li>
           <li>NodeJS</li>
+          <li>FastAPI</li>
+          <li>Python</li>
           <li>GraphQL</li>
           <li>MySQL</li>
           <li>PostgreSQL</li>
@@ -47,7 +50,7 @@ const IndexPage = () => {
         <br />
         <h3 style={{ color: '#404040' }}>Academic Life</h3>
         <p style={{ marginBottom: 5 }}>MSc.Computer Science student at Alexandria University</p>
-        <p style={{ marginBottom: 5 }}>Also, I do some research in the Software Engineering for Self-Adaptive Systems & ML</p>
+        <p style={{ marginBottom: 5 }}>Also, I do some research in the Software Engineering & ML</p>
         <br />
         <br />
         <h3 style={{ color: '#404040' }}>Wanna Say Hi!</h3>
