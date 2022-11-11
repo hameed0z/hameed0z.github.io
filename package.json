@@ -2,8 +2,8 @@
   "name": "hameed",
   "private": true,
   "description": "Hameed's Personal Website and Blog",
-  "version": "0.1.0",
-  "author": "hameed Muhammad <hamid.mu7mad@gmail.com>",
+  "version": "0.1.1",
+  "author": "Abdulhameed Abdulmuttalib <abdulhameed.abdulmuttalib@gmail.com>",
   "dependencies": {
     "@trendmicro/react-sidenav": "^0.4.5",
     "antd": "^3.17.0",

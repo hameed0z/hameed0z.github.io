@@ -98,7 +98,7 @@ const FormComponent = ({ form }) => {
                             `
                         },
                         recipients: [
-                            { address: 'hamid.mu7mad@gmail.com' }
+                            { address: 'abdulhameed.abdulmuttalib@gmail.com' }
                         ]
                     }) // body data type must match "Content-Type" header
                 }).then(response => {

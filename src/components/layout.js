@@ -59,17 +59,17 @@ const Layouts = ({ children, location }) => {
   const renderFooter = () => (
     <Footer style={{ textAlign: 'center', padding: 17 }}>
       <div style={{ display: 'flex', justifyContent: 'center', }}>
-        <a style={{ paddingBottom: 2 }} href='https://www.github.com/7ameed' target="_blank" rel="noopener noreferrer">
+        <a style={{ paddingBottom: 2 }} href='https://www.github.com/hameed0z' target="_blank" rel="noopener noreferrer">
           <Icon type='github' style={{ fontSize: 17 }} />
         </a>
-        <a style={{ paddingBottom: 2, marginLeft: 15, marginRight: 15 }} href='https://www.linkedin.com/in/abdelhameed-m' target="_blank" rel="noopener noreferrer">
+        <a style={{ paddingBottom: 2, marginLeft: 15, marginRight: 15 }} href='https://www.linkedin.com/in/hameed0z' target="_blank" rel="noopener noreferrer">
           <Icon type='linkedin' style={{ fontSize: 17 }} />
         </a>
         <a style={{ paddingBottom: 2 }} href='https://www.twitter.com/hameed0z' target="_blank" rel="noopener noreferrer">
           <Icon type='twitter' style={{ fontSize: 17 }} />
         </a>
       </div>
-      ©{new Date().getFullYear()} Hameed, All rights reserved.
+      ©{new Date().getFullYear()} Abdulhameed Abdulmuttalib, All rights reserved.
         </Footer>
   )
 
@@ -112,7 +112,7 @@ const Layouts = ({ children, location }) => {
           </Link>
 
         </Menu.Item>
-        <Menu.Item key="work">
+        {/* <Menu.Item key="work">
           <Link
             to="/work"
           >
@@ -120,7 +120,7 @@ const Layouts = ({ children, location }) => {
             <span>work</span>
           </Link>
 
-        </Menu.Item>
+        </Menu.Item> */}
         <Menu.Item key="blog">
           <Link
             to="/blog"

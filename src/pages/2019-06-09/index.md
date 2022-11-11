@@ -2,8 +2,8 @@
 path: "/blog/redis_and_mem_caching"
 date: "2019-06-09"
 title: "Redis as DB and mem-caching"
-author: "hameed"
-tags: ""
+author: "Hameed"
+tags: "redis,cahching"
 ---
 Through my journey in the development industry, I have been discovering more and more.
 tried to develop and enhance my skills in front-end, backend, and even cross-platform mobile development

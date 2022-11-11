@@ -10,7 +10,7 @@ export default function Template({ data }) {
   return (
     <Layout location='blog'>
       <div style={{ padding: 40, maxWidth: 800 }}>
-        <SEO title={post.frontmatter.title} keywords={[`hameed`, `blog`, `software`, `development`, 'web', 'mobile', 'app', 'application', 'javascript', 'nodejs', `react`]} />
+        <SEO title={post.frontmatter.title} keywords={['hameed0z', `hameed`, `blog`, `software`, `development`, 'web', 'backend', ...post.frontmatter.tags.split(',')]} />
         <div style={{ marginBottom: 20, }}>
           <h2 style={{ color: '#404040' }}>{post.frontmatter.title}</h2>
           <p style={{ color: '#939393', marginBottom: 0 }}>Posted at {post.frontmatter.date}</p>
@@ -24,7 +24,7 @@ export default function Template({ data }) {
           </Button>
         </div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <p>By following me on twitter
+        <p>Follow me on twitter
         <a style={{ marginLeft: 5 }} href='https://www.twitter.com/hameed0z' target="_blank" rel="noopener noreferrer">
             <Icon type='twitter' style={{ fontSize: 17 }} />
             <span> @hameed0z </span>
@@ -48,6 +48,7 @@ export const postQuery = graphql`
         title
         author
         date
+        tags
       }
     }
   }
