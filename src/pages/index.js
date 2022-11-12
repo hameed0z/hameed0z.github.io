@@ -61,13 +61,17 @@ const IndexPage = () => {
             <span> @hameed0z </span>
           </a>
           <br />
-          Also, you can
+          Or you can
           <a style={{ marginRight: 5 }} href="mailto:abdulhameed.abdulmuttalib@gmail.com" target="_blank" rel="noopener noreferrer">
-            <span> email me </span>
+            <span> email me. </span>
             <Icon theme='filled' type='mail' style={{ fontSize: 17 }} />
           </a>
+          <br />
+          Also, you can <a style={{ marginRight: 5 }} href="https://github.com/sponsors/hameed0z" target="_blank" rel="noopener noreferrer">
+            <span style={{ color: '#BF3989' }}> Sponser </span>
+            <Icon type='heart' style={{ fontSize: 17, color: '#BF3989' }} />
+          </a> me on github       
         </p>
-        <br />
       </div>
     </Layout>
   )

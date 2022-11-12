@@ -14,13 +14,17 @@ export default function Template({ data }) {
         <div style={{ marginBottom: 20, }}>
           <h2 style={{ color: '#404040' }}>{post.frontmatter.title}</h2>
           <p style={{ color: '#939393', marginBottom: 0 }}>Posted at {post.frontmatter.date}</p>
-          <Button size='small' ghost type='primary' href={`https://twitter.com/intent/tweet?original_referer=https://hameed.tech&amp;ref_src=&amp;text=${post.frontmatter.title}&amp;url=${windowGlobal.location}`} target="_blank" rel="noopener noreferrer">
+          <Button size='small' ghost type='primary' href={`https://twitter.com/intent/tweet?original_referer=https://hameed0z.github.io&amp;ref_src=&amp;text=${post.frontmatter.title}&amp;url=${windowGlobal.location}`} target="_blank" rel="noopener noreferrer">
             <Icon type='twitter' style={{ fontSize: 17 }} />
             <span> Tweet</span>
           </Button>
           <Button style={{ marginLeft: 5 }} size='small' type='primary' href={`https://www.facebook.com/sharer/sharer.php?u=${windowGlobal.location}`} target="_blank" rel="noopener noreferrer">
             <Icon type='facebook' theme='filled' style={{ fontSize: 17 }} />
             <span> Share</span>
+          </Button>
+          <Button style={{ marginLeft: 5, borderColor: '#BF3989' }} size='small' ghost type='primary' href={`https://github.com/sponsors/hameed0z`} target="_blank" rel="noopener noreferrer">
+            <Icon type='heart' style={{ fontSize: 17, color:'#BF3989' }} />
+            <span style={{ color: '#24292F' }}> Sponsor</span>
           </Button>
         </div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
