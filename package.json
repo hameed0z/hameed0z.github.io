@@ -1,9 +1,9 @@
 {
-  "name": "hameed",
+  "name": "hameed0z",
   "private": true,
-  "description": "Hameed's Personal Website and Blog",
+  "description": "hameed0z's Personal Website and Blog",
   "version": "0.1.1",
-  "author": "Abdulhameed Abdulmuttalib <abdulhameed.abdulmuttalib@gmail.com>",
+  "author": "Abdulhameed Abdulmuttalib <me@hameed0z.dev>",
   "dependencies": {
     "@trendmicro/react-sidenav": "^0.4.5",
     "antd": "^3.17.0",

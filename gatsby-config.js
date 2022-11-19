@@ -1,8 +1,8 @@
 module.exports = {
   pathPrefix: "/",
   siteMetadata: {
-    title: `Hameed`,
-    description: `Hameed's Personal Website and Blog`,
+    title: `hameed0z`,
+    description: `hameed0z's Personal Website and Blog`,
     author: `@hameed0z`,
   },
   plugins: [
@@ -79,8 +79,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Hameed`,
-        short_name: `hameed`,
+        name: `hameed0z`,
+        short_name: `hameed0z`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,

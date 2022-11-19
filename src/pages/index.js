@@ -7,13 +7,13 @@ const IndexPage = () => {
   return (
     <Layout location='/'>
       <div style={{ padding: 40, maxWidth: 800 }}>
-        <SEO title="me" keywords={['hameed0z', 'hameed', 'abdulhameed', 'abdulmuttalib', 'freelancer', `blog`, `software`, `development`, 'web', 'mobile', 'app', 'application', 'javascript', 'nodejs', 'react']} />
+        <SEO title="About" keywords={['hameed0z', 'hameed', 'abdulhameed', 'abdulmuttalib', 'freelancer', `blog`, `software`, `development`, 'web', 'mobile', 'app', 'application', 'javascript', 'nodejs', 'react']} />
         <div style={{ marginBottom: 20, }}>
           <h2 style={{ color: '#404040' }}>Abdulhameed Abdulmuttalib</h2>
           <h5 style={{ color: '#404040' }}>Software Engineer & Machine Learning Specialist</h5>
         </div>
         <br />
-        <h3 style={{ color: '#404040' }}>Hey there, It's Hameed! </h3>
+        <h3 style={{ color: '#404040' }}>Hey there, It's Abdulhameed (hameed0z)! </h3>
         <p style={{ marginBottom: 5 }}>A software engineer who likes to build,
           and help other people build software and data products for humans. <br />
           And I have been doing software development stuff for almost {new Date().getFullYear() - 2016} years. <br />
@@ -62,7 +62,7 @@ const IndexPage = () => {
           </a>
           <br />
           Or you can
-          <a style={{ marginRight: 5 }} href="mailto:abdulhameed.abdulmuttalib@gmail.com" target="_blank" rel="noopener noreferrer">
+          <a style={{ marginRight: 5 }} href="mailto:me@hameed0z.dev" target="_blank" rel="noopener noreferrer">
             <span> email me. </span>
             <Icon theme='filled' type='mail' style={{ fontSize: 17 }} />
           </a>

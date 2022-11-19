@@ -40,18 +40,16 @@ const Layouts = ({ children, location }) => {
 
   const handleSwipeLeft = () => {
     const opt = {
-      '/': 'work',
-      'work': 'blog',
-      'blog': 'blog'
+      '/': 'blog',
+      'blog': '/'
     }
     navigate(opt[location])
   }
 
   const handleSwipeRight = () => {
     const opt = {
-      '/': '/',
-      'work': '/',
-      'blog': 'work'
+      'blog': '/',
+      '/': 'blog'
     }
     navigate(opt[location])
   }
@@ -59,17 +57,20 @@ const Layouts = ({ children, location }) => {
   const renderFooter = () => (
     <Footer style={{ textAlign: 'center', padding: 17 }}>
       <div style={{ display: 'flex', justifyContent: 'center', }}>
-        <a style={{ paddingBottom: 2 }} href='https://www.github.com/hameed0z' target="_blank" rel="noopener noreferrer">
+        <a style={{ paddingBottom: 2 }} href='https://github.com/hameed0z' target="_blank" rel="noopener noreferrer">
           <Icon type='github' style={{ fontSize: 17 }} />
         </a>
-        <a style={{ paddingBottom: 2, marginLeft: 15, marginRight: 15 }} href='https://www.linkedin.com/in/hameed0z' target="_blank" rel="noopener noreferrer">
+        <a style={{ paddingBottom: 2, marginLeft: 7, marginRight: 3 }} href='https://linkedin.com/in/hameed0z' target="_blank" rel="noopener noreferrer">
           <Icon type='linkedin' style={{ fontSize: 17 }} />
+        </a>
+        <a style={{ paddingBottom: 2, marginLeft: 3, marginRight: 3 }} href='https://hameed0z.medium.com' target="_blank" rel="noopener noreferrer">
+          <Icon type='medium' style={{ fontSize: 17 }} />
         </a>
         <a style={{ paddingBottom: 2 }} href='https://www.twitter.com/hameed0z' target="_blank" rel="noopener noreferrer">
           <Icon type='twitter' style={{ fontSize: 17 }} />
         </a>
       </div>
-      ©{new Date().getFullYear()} Abdulhameed Abdulmuttalib, All rights reserved.
+      ©{new Date().getFullYear()} hameed0z, All rights reserved.
         </Footer>
   )
 
@@ -108,7 +109,7 @@ const Layouts = ({ children, location }) => {
             activeStyle={{ color: "#62b4fb" }}
           >
             <Icon type="user" />
-            <span>me</span>
+            <span>About</span>
           </Link>
 
         </Menu.Item>
@@ -126,7 +127,7 @@ const Layouts = ({ children, location }) => {
             to="/blog"
           >
             <Icon type="book" />
-            <span>blog</span>
+            <span>Blog</span>
           </Link>
         </Menu.Item>
       </Menu>
